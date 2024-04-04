@@ -1,0 +1,13 @@
+.home-container {
+  text-align: center;
+  direction: rtl;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
