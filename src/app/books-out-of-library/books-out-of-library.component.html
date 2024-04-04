@@ -1,0 +1,12 @@
+<div>
+  <input type="text" [(ngModel)]="searchQuery" placeholder="Enter a book name">
+  <button (click)="searchBooks()">Search</button>
+
+  <ul *ngIf="books.length > 0">
+    <li *ngFor="let book of books">
+      <strong>{{ book.volumeInfo.title }}</strong>
+      <p>Authors: {{ book.volumeInfo.authors?.join(', ') }}</p>
+    </li>
+  </ul>
+  <p *ngIf="books.length === 0">No books found.</p>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "books-lirary": {
+      "hosting": {
+        "books-managament": [
+          "books-lirary"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "books-lirary"
+  }
+}

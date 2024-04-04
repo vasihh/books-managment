@@ -1,0 +1,14 @@
+<div class="booksbody" *ngIf="books$ | async as books; else noBooks">
+  <ul *ngIf="books.length > 0; else noBooks">
+    <li *ngFor="let book of books">
+      <img *ngIf="book.imageURL" [src]="book.imageURL" alt="{{ book.name }}" height="200">
+      <h3>{{ book.name }}</h3>
+      <p>Author: {{ book.author }}</p>
+      <p>Tags: {{ book.tags }}</p>
+      <p>Quantity: {{ book.quantity }}</p>
+    </li>
+  </ul>
+</div>
+<ng-template #noBooks>
+  <p>No books were found here! Please check back later!</p>
+</ng-template>

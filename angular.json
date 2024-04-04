@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -89,10 +90,28 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "books-managament:build:production",
+              "serveTarget": "books-managament:serve:production"
+            },
+            "development": {
+              "buildTarget": "books-managament:build:development",
+              "serveTarget": "books-managament:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

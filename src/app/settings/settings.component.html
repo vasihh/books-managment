@@ -1,0 +1,13 @@
+<div class="toggle">
+  <label>
+    <input type="checkbox" [(ngModel)]="isDarkMode" name="darkModeToggle" (change)="DarkMode()">
+    Enable Dark Mode
+  </label>
+
+  <form (ngSubmit)="addManager()">
+    <label>Enter Manager name</label>
+    <input id="managerNameInput" type="text" [(ngModel)]="managerName" name="managerName" placeholder="Enter name here">
+    <button type="submit">Add Manager</button>
+  </form>
+  <p class="managersCount" id="managersCount">Managers Count: {{ managersCount }}</p>
+</div>

@@ -1,0 +1,24 @@
+<div class="addBookMain">
+  <div class="FormDiv">
+    <form (ngSubmit)="onAddBook()" #bookForm="ngForm">
+      <label for="bookName">Book Name:</label><br>
+      <input placeholder="Enter the book name" type="text" id="bookName" name="bookName" [(ngModel)]="book.name" required><br>
+
+      <label for="author">Author:</label><br>
+      <input placeholder="Enter author name ex. John Johnny" type="text" id="author" name="author" [(ngModel)]="book.author" required pattern="^[\\w]+\\s+[\\w]+.*$"><br>
+
+      <label for="tags">Tags:</label><br>
+      <input placeholder="Separate tags with |" type="text" id="tags" name="tags" [(ngModel)]="book.tags" pattern=".*\\|.*"><br>
+
+      <label for="quantity">Quantity:</label><br>
+      <input placeholder="Quantity ex: 5" type="number" id="quantity" name="quantity" [(ngModel)]="book.quantity" required min="1"><br>
+
+      <label for="image">Upload Image:</label><br>
+      <input type="file" id="image" name="image" (change)="onFileSelected($event)"><br>
+
+      <button type="submit" >Add</button>
+
+      <p class="errormssage" id="errorMessage">{{ errorMessage }}</p>
+    </form>
+  </div>
+</div>

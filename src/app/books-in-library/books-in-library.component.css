@@ -1,0 +1,58 @@
+.booksbody{
+  width: 100%;
+  text-align: -webkit-center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 50%;
+}
+
+
+
+li {
+  background-color: #f4f4f4;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+li:hover {
+  background-color: black;
+  color: #FFD000;
+}
+
+img {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  margin: 5px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#noBooks {
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}

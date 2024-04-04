@@ -1,0 +1,79 @@
+.annoncebar{
+  text-align: center;
+  background-color: rgb(255, 208, 0);
+  height: 3vh;
+  padding: 7px;
+  align-content: center;
+}
+
+.marq_annonce{
+
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+
+.header {
+  text-align: center;
+  padding: 15px;
+  background-color: Black;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.ulNavBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.ulNavBar li {
+  margin-right: 15px;
+}
+
+.ulNavBar li:last-child {
+  margin-right: 0;
+}
+
+.ulNavBar li a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.ulNavBar li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.ulNavBar li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 208, 0);
+  transition: width 0.3s ease;
+}
+
+.ulNavBar li a:hover::after {
+  width: 100%;
+}
+
+
+.ulNavBar li a.active {
+  font-weight: bold;
+  color: rgb(255, 208, 0);
+}
