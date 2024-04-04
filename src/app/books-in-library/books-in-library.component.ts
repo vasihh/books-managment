@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   selector: 'app-books-in-library',
   standalone: true,
   imports: [
-    CommonModule,  // Import CommonModule to use ngIf, ngFor, etc.
+    CommonModule,
     FormsModule
   ],
   templateUrl: './books-in-library.component.html',

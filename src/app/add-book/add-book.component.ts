@@ -7,7 +7,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-add-book',
   standalone: true,
-  imports: [FormsModule, MatSnackBarModule],  // Import MatSnackBarModule here
+  imports: [FormsModule, MatSnackBarModule],
   templateUrl: './add-book.component.html',
   styleUrls: ['./add-book.component.css']
 })
@@ -17,7 +17,7 @@ export class AddBookComponent {
   storage = getStorage();
   errorMessage: string = '';
 
-  constructor(private firestore: Firestore, private snackBar: MatSnackBar) {}  // Use MatSnackBar for dependency injection
+  constructor(private firestore: Firestore, private snackBar: MatSnackBar) {}
 
   onAddBook() {
     if (this.book.name == '') {
