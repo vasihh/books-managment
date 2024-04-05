@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { BooksOutOfLibraryComponent } from './books-out-of-library.component';
 
 describe('BooksOutOfLibraryComponent', () => {
@@ -8,10 +7,10 @@ describe('BooksOutOfLibraryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BooksOutOfLibraryComponent]
+      declarations: [BooksOutOfLibraryComponent]  // Use declarations here
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(BooksOutOfLibraryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

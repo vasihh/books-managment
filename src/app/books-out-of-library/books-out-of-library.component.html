@@ -1,12 +1,26 @@
-<div>
-  <input type="text" [(ngModel)]="searchQuery" placeholder="Enter a book name">
-  <button (click)="searchBooks()">Search</button>
+<h2 class="head">Books out of the library</h2>
+<p class="HS">Search for books outside the library:</p>
+<form (submit)="searchBooks()">
+    <input class="Sinput" type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Enter book title...">
+    <button type="submit" class="Search">🔍</button>
+</form>
+<h3 class="H">Search Results:</h3>
 
-  <ul *ngIf="books.length > 0">
-    <li *ngFor="let book of books">
-      <strong>{{ book.volumeInfo.title }}</strong>
-      <p>Authors: {{ book.volumeInfo.authors?.join(', ') }}</p>
-    </li>
-  </ul>
-  <p *ngIf="books.length === 0">No books found.</p>
-</div>
+<ng-container *ngTemplateOutlet="books?.length ? content : noContent"></ng-container>
+
+<ng-template #content>
+    <ul>
+        <li class="books" *ngFor="let book of books">
+            <p class="Bname">{{ book.volumeInfo.title }}<br></p>
+            <p><span class="Aname">Author:</span> {{ book.volumeInfo.authors?.join(', ') }}<br></p>
+            {{ book.volumeInfo.publishedDate }}<br>
+            {{ book.volumeInfo.description }}
+        </li>
+    </ul>
+</ng-template>
+
+<ng-template #noContent>
+    <div class="error">
+        <p>No results found.</p>
+    </div>
+</ng-template>
